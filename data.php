@@ -16,6 +16,7 @@ $phone = ['9876543210','1234567890'];
 $email = "admin@email.com";
 $address = "254 Street Avenue, Los Angeles, LA 2415 US";
 $address_short =  "Los Angeles, LA 2415 US";
+$year = date('Y');
 
 $services = array(
   array('ID','Product'),

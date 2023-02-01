@@ -17,6 +17,7 @@ $email = "admin@email.com";
 $address = "254 Street Avenue, Los Angeles, LA 2415 US";
 $address_short =  "Los Angeles, LA 2415 US";
 $year = date('Y');
+$footer_credit = '| Developed by <a href="https://clickplus.co.in" title="ClickPlus Solutions" rel="dofollow">ClickPlus Solutions</a>';
 
 $services = array(
   array('ID','Product'),

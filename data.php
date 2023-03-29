@@ -7,9 +7,26 @@ function active($currect_page){
     if($currect_page == $url){
         echo 'active'; //class name in css 
     } 
-  }
+}
+
 //<li class="nav-item <?php active('index.php'); active(''); ? >"> //Use like this
 // Active Menu
+
+/*
+$ser = array(
+	"Valve1" => array(
+	   "sub",
+	),
+  );
+$keys = array_keys($ser);
+for($i = 0; $i <= 0; $i++) {
+	foreach($ser[$keys[$i]] as $key => $value) {
+
+	}
+}
+*/
+
+
 
 $company = "Company_name";
 $phone = ['9876543210','1234567890'];
@@ -17,7 +34,7 @@ $email = "admin@email.com";
 $address = "254 Street Avenue, Los Angeles, LA 2415 US";
 $address_short =  "Los Angeles, LA 2415 US";
 $year = date('Y');
-$footer_credit = '| Developed by <a href="https://clickplus.co.in" title="ClickPlus Solutions" rel="dofollow">ClickPlus Solutions</a>';
+$footer_credit = '© Copyright '. $year ." " .  $company . ' | Developed by <a class="linear-text-two" href="https://clickplus.co.in" title="ClickPlus Solutions" rel="dofollow">ClickPlus Solutions</a>';
 
 $services = array(
   array('ID','Product'),

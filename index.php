@@ -1,1 +1,1 @@
-<?php include('data.php'); ?>
+<?php include('includes/data.php'); ?>

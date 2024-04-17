@@ -1,6 +1,8 @@
 <?php
 
-// Active Menu
+define('BASE_URL', '#');
+
+# Active Menu
 function active($currect_page){
     $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
     $url = end($url_array);  
@@ -10,8 +12,8 @@ function active($currect_page){
 }
 
 //<li class="nav-item <?php active('index.php'); active(''); ? >"> //Use like this
-// Active Menu
 
+# Basic Details
 $company = "Company_name";
 $phone = ['9876543210','1234567890'];
 $email = "admin@email.com";
@@ -21,10 +23,33 @@ $year = date('Y');
 $footer_credit = '© Copyright '. $year ." " .  $company . ' | Developed by <a class="linear-text-two" href="https://clickplus.co.in" title="ClickPlus Solutions" rel="dofollow">ClickPlus Solutions</a>';
 $author = '<meta name="author" content="Amigo Dheena">';
 
-$services = array(
-  array('ID','Product'),
+# Includes
+$Header = "includes/header.php";
+$Footer = "includes/footer.php";
+
+# Social Media
+$facebook = '#';
+$youtube = '#';
+$instagram = '#';
+$twitter = '#';
+
+# Menu
+$menu = array(
+	array('Home','/'),
+	array('About','about.php'),
+	array('Services','services.php'),
+	array('Contact','contact.php'),
 );
 
+# Services
+$services = array(
+	array(
+		'ID',
+		'#'
+	),
+);
+
+# WhatsApp Chat Button
 $whatsapp = '
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=9876543210" class="float" target="_blank">

@@ -1,9 +1,9 @@
 <?php
 /**
- * Main entry point for Static Site Template
+ * Alternative index file with query parameter routing
+ * Use this if .htaccess URL rewriting isn't working
  * 
- * @author Amigo Dheena
- * @version 1.0
+ * URLs will be: index.php?page=about instead of /about
  */
 
 // Load the application bootstrap
@@ -12,15 +12,15 @@ require_once 'app.php';
 // Load data and handle routing
 require_once 'includes/data.php';
 
+// Override the router's current page detection for query parameter method
+if (isset($_GET['page'])) {
+    $router = $GLOBALS['router'];
+    $router->setCurrentPage($_GET['page']);
+}
+
 // Special routing test
 if (currentPage() === 'test-routing') {
     include 'test-routing.php';
-    exit;
-}
-
-// URL test page
-if (currentPage() === 'url-test') {
-    include 'url-test.php';
     exit;
 }
 
@@ -47,3 +47,4 @@ if ($pageTemplate) {
         show404();
     }
 }
+?>

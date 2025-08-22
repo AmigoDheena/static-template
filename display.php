@@ -1,9 +1,12 @@
 <?php
+/**
+ * Legacy display file for backward compatibility
+ * 
+ * @author Amigo Dheena
+ * @version 1.0
+ * @deprecated This file is kept for backward compatibility. Use index.php instead.
+ */
 
-// Include data.php file containing the pages array
-include 'includes/data.php';
-
-// // Get the requested page from the URL
-$page = isset($_GET['page']) ? $_GET['page'] : null;
-
-?>
+// Redirect to index.php for proper handling
+header('Location: index.php' . (isset($_GET['page']) ? '?page=' . urlencode($_GET['page']) : ''));
+exit;

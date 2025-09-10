@@ -12,10 +12,22 @@
 
     # Menu
     $menu = array(
-        array('Home','/'),
-        array('About','about.php'),
-        array('Services','services.php'),
-        array('Contact','contact.php'),
+        array(
+          'name'=>  'Home',
+          'link'=>  '/'
+        ),
+        array(
+          'name'=>  'About',
+          'link'=>  'about.php'
+        ),
+        array(
+          'name'=>  'Services',
+          'link'=>  'services.php'
+        ),
+        array(
+          'name'=>  'Contact',
+          'link'=>  'contact.php'
+        ),
     );
 
 ?>
